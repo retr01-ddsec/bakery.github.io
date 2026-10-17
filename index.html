@@ -27,6 +27,7 @@
           <a href="#menu">Menú</a>
           <a href="#paquetes">Paquetes</a>
           <a href="#contacto">Contacto</a>
+          <a href="#opiniones">Opiniones</a>
           <a class="button button-nav whatsapp-link" href="#contacto" data-message="¡Hola! Quiero hacer un pedido en Denis's Bakery. ¿Me comparten el menú, por favor?">Pedir por WhatsApp <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
@@ -50,7 +51,7 @@
       <section class="story section-space" id="nosotros" aria-labelledby="story-title">
         <div class="container story-grid">
           <div class="story-photo photo-frame">
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85" alt="Pastel artesanal decorado con fruta fresca" loading="lazy">
+            <img src="img/rojos.jpg" alt="Pastel artesanal decorado con fruta fresca" loading="lazy">
             <span class="photo-caption">Preparado al momento</span>
           </div>
           <div class="story-copy">
@@ -82,14 +83,14 @@
             <div class="category-heading"><h3>Repostería <span>&</span> postres</h3><span class="category-rule"></span></div>
             <div class="product-grid">
               <article class="product-card" data-category="postres">
-                <a class="product-image" href="#contacto" aria-label="Pedir cheesecake de maracuyá"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=85" alt="Rebanada de cheesecake artesanal" loading="lazy"></a>
+                <a class="product-image" href="#contacto" aria-label="Pedir cheesecake de maracuyá"><img src="img/maracuya.jpg" alt="Rebanada de cheesecake artesanal" loading="lazy"></a>
                 <div class="product-info"><div><h4>Cheesecake de Maracuyá</h4><p>Suave, fresco y con un toque tropical.</p></div><strong class="price">$40</strong></div>
                 <a class="product-order order-button" href="#contacto" data-product="Cheesecake de Maracuyá">Pedir por WhatsApp <span aria-hidden="true">↗</span></a>
               </article>
               <article class="product-card" data-category="postres">
-                <a class="product-image" href="#contacto" aria-label="Pedir cheesecake de Oreo"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=85" alt="Pastel de chocolate y galleta" loading="lazy"></a>
-                <div class="product-info"><div><h4>Cheesecake de Oreo</h4><p>Cremoso con el toque de galleta que encanta.</p></div><strong class="price">$45</strong></div>
-                <a class="product-order order-button" href="#contacto" data-product="Cheesecake de Oreo">Pedir por WhatsApp <span aria-hidden="true">↗</span></a>
+                <a class="product-image" href="#contacto" aria-label="Pedir cheesecake de frutos rojos"><img src="img/rrojos.jpg" alt="Cheesecake de frutos rojos" loading="lazy"></a>
+                <div class="product-info"><div><h4>Cheesecake de Frutos Rojos</h4><p>Cremoso, fresco y cubierto con frutos rojos.</p></div><strong class="price">$45</strong></div>
+                <a class="product-order order-button" href="#contacto" data-product="Cheesecake de Frutos Rojos">Pedir por WhatsApp <span aria-hidden="true">↗</span></a>
               </article>
               <article class="product-card" data-category="postres">
                 <a class="product-image" href="#contacto" aria-label="Pedir flan de cajeta"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Postre cremoso con caramelo" loading="lazy"></a>
@@ -123,6 +124,8 @@
         </div>
       </section>
 
+
+
       <section class="package-section section-space" id="paquetes" aria-labelledby="package-title">
         <div class="container package-card">
           <div class="package-image"><img src="img/HDCC.jpg" alt="Hot dog y acompañamiento servidos para compartir" loading="lazy"></div>
@@ -152,7 +155,72 @@
           </div>
         </div>
       </section>
+      <section class="reviews-section section-space" id="opiniones" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow"><span class="eyebrow-line"></span> Lo que dicen de nosotros</span>
+            <h2 id="reviews-title">Opiniones de <em>nuestros clientes</em></h2>
+            <p>Cada detalle nos importa. Gracias por compartir tu experiencia.</p>
+          </div>
+
+          <div class="review-grid" id="review-list" aria-live="polite"></div>
+          <p class="review-empty" id="review-empty">Aún no hay opiniones, ¡sé el primero en dejarnos la tuya!</p>
+
+          <div class="review-form-wrap">
+            <div class="review-form-heading">
+              <span class="eyebrow"><span class="eyebrow-line"></span> Tu experiencia</span>
+              <h3>Cuéntanos qué te pareció</h3>
+              <p>Tu opinión ayuda a otras personas a descubrir sus nuevos favoritos.</p>
+            </div>
+            <form class="review-form" id="review-form">
+              <div class="form-field">
+                <label for="review-name">Tu nombre</label>
+                <input id="review-name" name="name" type="text" maxlength="60" autocomplete="name" placeholder="¿Cómo te llamas?" required>
+              </div>
+              <div class="form-field">
+                <label for="review-product">¿Qué probaste?</label>
+                <select id="review-product" name="product" required>
+                  <option value="" disabled selected>Elige un producto</option>
+                  <option>Cheesecake de Maracuyá</option>
+                  <option>Cheesecake de Frutos Rojos</option>
+                  <option>Flan de Cajeta</option>
+                  <option>Arroz con Leche</option>
+                  <option>Hot Dogs</option>
+                  <option>Coca-Cola</option>
+                  <option>Paquetelolleves</option>
+                </select>
+              </div>
+              <fieldset class="form-field rating-field">
+                <legend>Tu calificación</legend>
+                <div class="rating-options" role="radiogroup" aria-label="Calificación de una a cinco estrellas">
+                  <input id="rating-5" name="rating" type="radio" value="5" required>
+                  <label for="rating-5" aria-label="5 estrellas" title="5 estrellas">★</label>
+                  <input id="rating-4" name="rating" type="radio" value="4">
+                  <label for="rating-4" aria-label="4 estrellas" title="4 estrellas">★</label>
+                  <input id="rating-3" name="rating" type="radio" value="3">
+                  <label for="rating-3" aria-label="3 estrellas" title="3 estrellas">★</label>
+                  <input id="rating-2" name="rating" type="radio" value="2">
+                  <label for="rating-2" aria-label="2 estrellas" title="2 estrellas">★</label>
+                  <input id="rating-1" name="rating" type="radio" value="1">
+                  <label for="rating-1" aria-label="1 estrella" title="1 estrella">★</label>
+                </div>
+              </fieldset>
+              <div class="form-field form-field-wide">
+                <label for="review-comment">Tu opinión</label>
+                <textarea id="review-comment" name="comment" rows="4" maxlength="500" placeholder="¿Qué fue lo que más te gustó?" required></textarea>
+              </div>
+              <div class="review-submit-row">
+                <p class="review-form-status" id="review-status" role="status" aria-live="polite"></p>
+                <button class="button button-gold" type="submit">Publicar opinión <span aria-hidden="true">↗</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+
 
     <footer class="site-footer">
       <div class="container footer-main">
